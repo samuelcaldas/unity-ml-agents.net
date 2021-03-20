@@ -56,7 +56,7 @@ namespace Tensorflow.Unity3D.Trainers
             m_size = use_recurrent ? m_size : 0;
             this.normalize = normalize;
             act_size = brain.vector_action_space_size;
-            vec_obs_size = brain.vector_observation_space_size * brain.num_stacked_vector_observations;
+            vec_obs_size = brain.vector_observation_space_size;
             vis_obs_size = brain.number_visual_observations;
             tf.Variable(
                 Convert.ToInt32(brain.vector_action_space_type == "continuous"),
